@@ -1,5 +1,8 @@
 package com.example.postman;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
 
@@ -7,11 +10,14 @@ import reactor.core.publisher.Mono;
 class PostmanScriptController {
 
 
+    @PostMapping(path = "/postmanCollection")
+    public Mono<PostmanCollection> generatePostmanCollection(@RequestBody UserStory userStory) {
 
+        PostmanCollection result = new PostmanCollection();
 
-    public Mono<Collection> generatePostmanCollection(String description, String url, String acceptanceCriteria){
+        result.set
 
-        return Mono.just(new Collection());
+        return Mono.just(new PostmanCollection());
 
     }
 

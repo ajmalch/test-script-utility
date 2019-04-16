@@ -1,8 +1,10 @@
 package com.example.postman;
 
 import java.util.List;
+import lombok.Data;
 
-class Collection {
+@Data
+public class PostmanCollection {
 
     private Information info;
 
